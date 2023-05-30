@@ -102,7 +102,7 @@ function Login() {
 
                       <FormControl isRequired isInvalid={isError}>
                         <FormLabel>Username</FormLabel>
-                        <Input type='tel' value={input} onChange={handleInputChange} />
+                        <Input type='text' value={input} onChange={handleInputChange} />
                         {!isError ? (
                           <FormHelperText></FormHelperText>
                         ) : (

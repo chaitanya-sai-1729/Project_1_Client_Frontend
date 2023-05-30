@@ -99,7 +99,7 @@ export const SignUp = () => {
 
                     <FormControl isRequired isInvalid={isError}>
                       <FormLabel>Username</FormLabel>
-                      <Input placeholder='Enter Username' type='tel' value={input} onChange={handleInputChange} />
+                      <Input placeholder='Enter Username' type='text' value={input} onChange={handleInputChange} />
                       {!isError ? (
                         <FormHelperText></FormHelperText>
                       ) : (
