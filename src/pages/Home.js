@@ -21,6 +21,7 @@ export const Home = () => {
   const navigate = useNavigate();
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
+  const [accuracy, setAccuracy] = useState('');
 
   const location = useLocation();
   const { username } = location.state;
@@ -31,8 +32,9 @@ export const Home = () => {
       navigator.geolocation.getCurrentPosition((position) => {
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
-        console.log(latitude, longitude,position.coords.accuracy);
-        Axios.post("https://project-1-client-backend.vercel.app/home", { _id:username,latitude: latitude, longitude: longitude }).then(function (response) {
+        setAccuracy(position.coords.accuracy);
+        console.log(latitude, longitude,accuracy);
+        Axios.post("https://project-1-client-backend.vercel.app/home", { _id:username,latitude: latitude, longitude: longitude,accuracy:accuracy }).then(function (response) {
           console.log(response);
         })
       });

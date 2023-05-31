@@ -47,7 +47,7 @@ function Login() {
     try {
 
       const allUsers = await Axios.get("https://project-1-client-backend.vercel.app/users").then((e) => {
-        // console.log(e.data);
+        console.log(e.data);
         const arr = e.data;
         var len = 0;
         for (var i = 0; i < arr.length; i++) {
