@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 import {
   Box,
@@ -23,7 +24,14 @@ import {
   FormErrorMessage,
   Divider,
   Text,
-  ButtonGroup
+  ButtonGroup,
+  Checkbox,
+  Flex,
+  HStack,
+  useColorModeValue,
+
+  
+
 
 
 
@@ -73,16 +81,17 @@ function Login() {
 
   }
 
-
+  const [showPassword, setShowPassword] = useState(false);
 
 
   return (
     <>
 
       <ChakraProvider>
+        <Flex minH={"100vh"} justify={"center"} align={"center"}>
         <Box>
           <Center>
-            <Box boxShadow='dark-lg' p='0' rounded='md' bg='white' mt={8}>
+            <Box boxShadow='dark-lg' p='0' rounded='md' bg='white' mt={0}>
               <Card maxW='sm'>
 
                 <CardBody mt={0}>
@@ -144,6 +153,7 @@ function Login() {
           </Center>
         </Box>
 
+        </Flex>
       </ChakraProvider>
     </>
   );
