@@ -145,10 +145,10 @@ const Home = () => {
 
 
   return (
-    <>
+   
       <ChakraProvider>
         
-        <Flex direction={'column'}  minH="100vh">
+        <Flex direction="column"  h="100%">
           <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
               <HStack spacing={8} alignItems={'center'}>
@@ -190,15 +190,18 @@ const Home = () => {
             </Flex>
 
           </Box>
-          <Flex>
+          
+          <Flex flex='1' justifyContent="center" >
             <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
               <Flex>
                 <Box
                   bg="#02054B"
                   color="white"
                   borderRadius="lg"
-                  m={{ sm: 4, md: 16, lg: 10 }}
-                  p={{ sm: 5, md: 5, lg: 16 }}>
+                  m={{ sm: 4, md: 16, lg: 6 }}
+                  p={{ sm: 5, md: 5, lg: 10 }}
+                  mt={0}
+                  >
                   <Box p={4} mt={0}>
                     <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                       <WrapItem>
@@ -336,7 +339,7 @@ const Home = () => {
             </Container>
           </Flex>
 
-          <Flex bg="white" p={4} height="60px" alignItems={"center"} justifyContent={"space-between"}>
+          <Flex bg="white" alignItems={"center"} justifyContent={"space-between"}>
             <Box
               bg={useColorModeValue('gray.50', 'gray.900')}
               color={useColorModeValue('gray.700', 'gray.200')}
@@ -370,7 +373,7 @@ const Home = () => {
         </Flex>
   
       </ChakraProvider>
-    </>
+  
   );
 }
 
